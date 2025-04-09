@@ -1,0 +1,73 @@
+/*import google font*/
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "popins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color:#f6f7fb;
+}
+.container{
+    padding: 1rem 1rem;
+    border-radius:14px ;
+    background: #fff;
+    box-shadow: 0px 10px rgba(0,0,0.2);
+}
+.result_images{
+    display: flex;
+    column-gap: 7rem;
+
+}
+.result_images img{
+    width: 100px;
+}
+.user_result img{
+    transform: rotate(90deg);
+}
+.cpu_result img {
+    transform: rotate(-90deg);
+}
+.result{
+    text-align: center;
+    font-size: 2rem;
+    margin: 1.5em;
+}
+.option_images img {
+    width: 70px;
+    align-items: center;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+}
+.option_images{
+    display: flex;
+    align-items: center;
+    margin-top: 2.5em;
+    justify-content: space-between;
+}
+.option_image{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: o.5em;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+}
+.option_image img{
+    pointer-events: none;
+}
+.option_image p{
+    font-size: 1.25em;
+    margin-top: 1rem;
+    pointer-events: none;
+}
+.option_image:hover{
+    opacity: 1;
+}
