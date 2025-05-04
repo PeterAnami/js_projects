@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reversal</title>
+</head>
+<body>
+    <h2>Number reversal</h2>
+    <p id="demo"></p>
+
+    <script>
+        // define afunction named reversal that takes a parameter
+        function reversal(n){
+            //convert the input number to a string
+            n = n + "";
+
+            //split the string into an array of characters, reverse the array, and then join the characters back into a string
+            return n.split("").reverse().join("")
+        }
+        // convert the reversed string back to a number and log it to the consol
+    document.getElementById("demo").innerHTML=(Number(reversal(12345)));
+    </script>
+</body>
+</html>

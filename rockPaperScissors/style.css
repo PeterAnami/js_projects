@@ -12,7 +12,8 @@ body{
     height: 100vh;
     display: flex;
     align-items: center;
-    background-color:#f6f7fb;
+    justify-content: center;
+    background:#f6f7fb;
 }
 .container{
     padding: 1rem 1rem;
@@ -50,14 +51,17 @@ body{
     align-items: center;
     margin-top: 2.5em;
     justify-content: space-between;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
 }
 .option_image{
     display:flex;
     flex-direction: column;
     align-items: center;
-    opacity: o.5em;
+    opacity: 0.5;
     cursor: pointer;
     transition: opacity 0.3s ease;
+   
 
 }
 .option_image img{
