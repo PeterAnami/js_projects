@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day_time</title>
+</head>
+<body>
+    <h2>display current day and time</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        //get the current date and time
+        var today = new Date();
+
+        //get the day of the week (0-6, where 0 is sunday and 6 is saturday)
+        var day = today.getDay();
+
+        //array of day names 
+        var daylist = ["sunday", "monday","tuesday","wednesday", "thursday","friday","saturday"];
+
+        // display the current day
+        document.getElementById("demo").innerHTML= "today is: " + daylist[day] + ".";
+
+        // get the current hour, minute and second
+        var hour = today.getHours();
+        var minute= today.getMinutes();
+        var second = today.getSeconds();
+
+        //determine if its AM or PM
+        var prepend = (hour >= 12) ? "PM": "AM";
+
+        //convert 24-hour format to 12-hour format
+        hour = (hour >= 12) ? hour-12: hour;
+
+        //check for special cases when hour is 0
+        if (hour === 0 && prepend === 'PM'){
+            if(minute === 0 && second === 0){
+                hour = 12;
+                prepend = 'Noon';
+
+            }else{
+                hour= 12;
+                prepend = 'PM';
+
+            }
+        }
+        //check for special cases when hour is 0
+        if (hour === 0 && prepend === 'AM'){
+            if (minute === 0 && second === 0){
+                hour = 12;
+                prepend = 'Midnight';
+            }else{
+                hour = 12;
+                prepend = 'AM';
+            }
+        }
+
+        //display current time
+        document.getElementById("demo").innerHTML= "Current time: "+hour+prepend+ " : "+minute +" : "+second;
+    </script>
+</body>
+</html>
