@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotate</title>
+</head>
+<body>
+    <h2>string rotation</h2>
+    <p id="demo"></p>
+
+    <script>
+        //define a function that animates the character of a string
+        function animate(demo){
+    
+            //get element by id
+        var element = document.getElementById(demo);
+    
+        //access the text node inside the element
+    var textNode =element.childNodes[0];
+
+    //extract the initial text content of the text node
+    var text = textNode.data; 
+
+    // set up an interval to torate the characters in the test every 100 milliseconds
+    setInterval(function(){
+        //move the last character to the beginning of the string
+        text = text[text.length - 1] + text.substring(0, text.length -1)
+
+        //update the text content of the text node with the modified string
+        textNode.date = text;
+
+    }, 100);
+    };
+    animate(demo);
+    </script>
+</body>
+</html>
